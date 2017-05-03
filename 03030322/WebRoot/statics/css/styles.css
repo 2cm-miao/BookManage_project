@@ -1,0 +1,13 @@
+body{
+	margin:0px;
+	background-color: #FFFFFF;
+}
+
+table{
+	border-collapse:collapse;
+	text-align: center;
+	margin:0 auto;
+}
+h1{
+	text-align: center;
+}
