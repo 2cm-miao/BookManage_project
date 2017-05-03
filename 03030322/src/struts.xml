@@ -3,10 +3,8 @@
 <struts>
 	<package name="default" extends="struts-default">
 		<action name="login" class="org.action.LoginAction">
-			<result name="admin">/admin.jsp</result>
-			<result name="student">/student.jsp</result>
+			<result name="success">/main.jsp</result>
 			<result name="error">/error.jsp</result>
-			<result name="input">/login.jsp</result>
 		</action>
 	</package>
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>

@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -17,29 +16,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+	
+	<link rel="stylesheet" type="text/css" href="statics/css/styles.css">
+	
 
   </head>
   
-  <body bgcolor="#71CABF">
-  	<s:form action="login" method="post" theme="simple">
-  		<table>
-  			<caption>用户登录</caption>
-  			<tr>
-  				<td>登录名<s:textfield name="login.name" size="20"/></td>
-  			</tr>
-  			<tr>
-  				<td>密&nbsp;&nbsp;码<s:password name="login.password" size="20"/></td>
-  			</tr>
-  			<tr>
-  				<td>
-					<s:submit value="登录"/>
-					<s:reset value="重置"/>
-				</td>
-  			</tr>
-  		</table>
-  	</s:form>
+  <body>
+    <table bgcolor="#71CABF">
+    	<tr>
+    		<td colspan="2"><jsp:include page="head.jsp"></jsp:include>
+    	</tr>
+    	<tr>
+    		<td height="400"></td>
+    	</tr>
+    	<tr>
+    		<td colspan="2" align="center">
+    			<font size="2">南京师范大学：南京市宁海路122号   <br>邮编：210097<br>师教教育研究中心版权所有2010-2015</font>
+    		</td>
+    	</tr>
+    </table>
   </body>
 </html>

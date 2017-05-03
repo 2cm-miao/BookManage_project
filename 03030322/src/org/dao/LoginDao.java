@@ -10,7 +10,7 @@ public class LoginDao {
 		conn=DBConn.getConn();
 		PreparedStatement pstmt;
 		try {
-			pstmt = conn.prepareStatement("select * from users where name=? and password=?");
+			pstmt = conn.prepareStatement("select * from user where user_name=? and password=?");
 			pstmt.setString(1, name);
 			pstmt.setString(2, password);
 			ResultSet rs=pstmt.executeQuery();

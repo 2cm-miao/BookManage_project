@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -10,8 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>图书管理系统</title>
-    
+    <title>My JSP 'index.jsp' starting page</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -20,26 +18,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
   </head>
   
-  <body bgcolor="#71CABF">
-  	<s:form action="login" method="post" theme="simple">
-  		<table>
-  			<caption>用户登录</caption>
-  			<tr>
-  				<td>登录名<s:textfield name="login.name" size="20"/></td>
-  			</tr>
-  			<tr>
-  				<td>密&nbsp;&nbsp;码<s:password name="login.password" size="20"/></td>
-  			</tr>
-  			<tr>
-  				<td>
-					<s:submit value="登录"/>
-					<s:reset value="重置"/>
-				</td>
-  			</tr>
-  		</table>
-  	</s:form>
+  <body>
+    This is my JSP page. <br>
   </body>
 </html>

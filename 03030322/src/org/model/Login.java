@@ -1,8 +1,8 @@
 package org.model;
 
 public class Login {
-	private Integer id;//用户ID
-	private String name;//用户名
+	private Integer id;//ID
+	private String name;//姓名
 	private String password;//密码
 	private boolean role;//角色
 	public Login() {
