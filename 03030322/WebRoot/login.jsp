@@ -31,13 +31,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				<td>登录名<s:textfield name="login.name" size="20"/></td>
   			</tr>
   			<tr>
-  				<td>密&nbsp;&nbsp;码<s:password name="login.password" size="20"/></td>
+  				<td>密&nbsp;码<s:password name="login.password" size="20"/></td>
   			</tr>
   			<tr>
   				<td>
 					<s:submit value="登录"/>
 					<s:reset value="重置"/>
 				</td>
+  			</tr>
+  			<!-- 验证失败信息或验证错误信息在这里显示 -->
+  			<tr>
+  				<td>
+  					<font color="red"><s:fielderror/><s:property value="message"/></font>
+  				</td>
   			</tr>
   		</table>
   	</s:form>

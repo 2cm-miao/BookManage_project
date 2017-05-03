@@ -8,13 +8,13 @@ public class DBConn {
 	
 	public static Connection conn;
 	/**
-	 * 数据库连接
+	 * 连接
 	 * @return
 	 */
 	public static Connection getConn(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","root");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql","root","root");
 			return conn;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -22,12 +22,13 @@ public class DBConn {
 		}
 	}
 	/**
-	 * 关闭连接
+	 * 关闭
 	 */
 	public static void closeConn(){
 		try {
 			conn.close();
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
