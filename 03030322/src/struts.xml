@@ -8,6 +8,26 @@
 			<result name="error">/error.jsp</result>
 			<result name="input">/login.jsp</result>
 		</action>
+		
+		<!-- 查询以借阅图书 -->
+		<action name="selectBook" class="org.action.LendAction" method="selectAllLend">
+			<result name="success">/lend.jsp</result>
+		</action>
+		
+		<!-- 图书管理 -->
+		<action name="book"class="org.action.BookAction">
+			<result name="success">/bookmanage.jsp</result>
+			<result name="input">/bookmanage.jsp</result>
+			<interceptor-ref name="defaultStack">
+				<param name="validation.excludeMethods">*</param>
+				<param name="validation.includeMethods">addBook,updateBook</param>
+			</interceptor-ref>
+		</action>
 	</package>
+	<!-- 设置Web应用编码集，为获取表单提交的中文信息 -->
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 指定上传文件的临时保存路径，为上传图书封面照片 -->
+	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+	<!-- 设置支持动态方法调用，为在页面上用多个功能按钮实现不同的功能 -->
+	<constant name="struts.enable.DymaicMethodInvocation" value="true"/>
 </struts>
